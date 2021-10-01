@@ -11,13 +11,13 @@ import cv2
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-m", "--model", required=True,
-	help="/User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-model.net")
+	help="D:/Dropbox/flickr/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-model.net")
 ap.add_argument("-c", "--classes", required=True,
-	help="/User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-classes.txt")
+	help="D:/Dropbox/flickr/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-classes.txt")
 ap.add_argument("-i", "--image", required=True,
-	help="/User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/images/gsv_0.jpg")
+	help="D:/Dropbox/flickr/ARGO_Labs/opencv-semantic-segmentation/images/gsv_0.jpg")
 ap.add_argument("-l", "--colors", type=str,
-	help="/User/ishachaturvedi/Isha/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-colors.txt")
+	help="D:/Dropbox/flickr/ARGO_Labs/opencv-semantic-segmentation/enet-cityscapes/enet-colors.txt")
 ap.add_argument("-w", "--width", type=int, default=500,
 	help="desired width (in pixels) of input image")
 args = vars(ap.parse_args())
@@ -104,6 +104,6 @@ output = ((0.4 * image) + (0.6 * mask)).astype("uint8")
 
 # show the input and output images
 cv2.imshow("Legend", legend)
-cv2.imshow("Input", image)
+#cv2.imshow("Input", image)
 cv2.imshow("Output", output)
 cv2.waitKey(0)
